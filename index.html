@@ -10,6 +10,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/animate.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
@@ -28,7 +29,7 @@
 				</nav>
 			</header>		
 			<section id="intro" class="main style1 dark fullscreen">
-				<div class="content">
+				<div class="content animated flipInY">
 					<header>
 						<h2>Expertos en tecnología.</h2>
 					</header>
@@ -38,7 +39,7 @@
 					</footer>
 				</div>
 			</section>		
-			<section id="one" class="main style2 right dark fullscreen">
+			<section id="one" class="main style2 right dark fullscreen animated">
 				<div class="content box style2">
 					<header>
 						<h2>Nosotros</h2>
@@ -132,8 +133,16 @@
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
+			<script src="assets/js/jquery.viewportchecker.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-
+			<script type="text/javascript">
+				jQuery(document).ready(function() {
+				    jQuery('.box').viewportChecker({
+				        classToAdd: 'animated fadeInUp',
+				        offset: 150
+				       });
+				});
+			</script>
 	</body>
 </html>
